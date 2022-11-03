@@ -1,0 +1,95 @@
+@font-face {
+    font-family: TradeGothicLT;
+    src: url(../Trade_Gothic_Font/TradeGothicLT.ttf);
+}
+
+@font-face {
+    font-family: TradeGothicLT;
+    src: url(../Trade_Gothic_Font/TradeGothicLTBoldExtended.ttf);
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    font-family: TradeGothicLT, sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+.conntent {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    padding: 30px 0;
+    background-color: white;
+    transition: all .3s ease-out;
+}
+
+header.shadow {
+    box-shadow: 0 0 60px rgb(0 0 0 / 50%);
+    transition: all .3s ease-out;
+}
+
+header.hide {
+    transform: translateY(-101%);
+    transition: all .3s ease-out;
+}
+
+header .conntent {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+header div {
+    display: flex;
+    width: 33%;
+    align-items: flex-end;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+header .mid {
+    justify-content: center;
+}
+
+header .right{
+    justify-content: flex-end;
+}
+
+header .left p:nth-child(2) {
+    margin-left: 50px;
+}
+
+header img {
+    width: 100%;
+    max-width: 180px;
+}
+
+header p:hover {
+    border-bottom: 2px solid black;
+    transform: translateY(2px);
+}
+
+header p {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.top {
+    width: 100%;
+}
+
+.top img {
+    width: 100%;
+    transform: scaleX(-1);
+}
