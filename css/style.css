@@ -9,6 +9,16 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: 'FF Good Pro';
+    src: local('../FFGoodPro-Medium/FF Good Pro Medium'), local('../FFGoodPro-Medium/FF-Good-Pro-Medium'),
+        url('../FFGoodPro-Medium/') format('woff2'),
+        url('../FFGoodPro-Medium/FFGoodPro-Medium.woff') format('woff'),
+        url('../FFGoodPro-Medium/FFGoodPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     font-family: TradeGothicLT, sans-serif;
@@ -18,7 +28,7 @@ p {
     margin: 0;
 }
 
-.conntent {
+.content {
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
@@ -87,9 +97,63 @@ header p {
 
 .top {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../assets/SW-3.jpg.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-.top img {
-    width: 100%;
-    transform: scaleX(-1);
+.top .topContent {
+    display: flex;
+    flex-direction: column;
+    /* padding-top: 400px; */
+    width: 35%;
+    margin-left: auto;
+    font-size: 40px;
+    color: #fff;
+}
+
+.top h1 {
+    z-index: 1;
+    filter: drop-shadow(0 0 30px #1f1e21);
+    font-family: FF Good Pro Comp Ultra;
+    font-weight: unset;
+    margin-bottom: -0.12em;
+    text-transform: uppercase;
+    line-height: .9em;
+    letter-spacing: .02em;
+    font-size: 7.5rem;
+    margin-top: 0;
+}
+
+.top h1 span {
+    color: #da291c;
+}
+
+.top p {
+    font-size: 20px;
+    filter: drop-shadow(0 0 30px #1f1e21) drop-shadow(0 0 20px #1f1e21) drop-shadow(0 0 10px #1f1e21);
+    margin-top: 1.5rem;
+}
+
+.button p {
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .05em;
+    font-weight: bold;
+    padding: .85rem 2rem;
+    width: fit-content;
+    filter: none;
+}
+
+.button {
+    background-color: #da291c;
+    width: fit-content;
+}
+
+.buttonWrap {
+    margin-top: 2.5rem;
 }

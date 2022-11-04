@@ -2,11 +2,30 @@
 
 let header
 let headerHeight
+let wHeight
 
 $(document).ready(() => {
     header = $('header')
     headerHeight = $(header).outerHeight()
-    console.log(headerHeight)
+    $('.top').css('margin-top', headerHeight + 'px')
+    console.log('header height: ', headerHeight)
+    
+    wHeight = $(window).innerHeight()
+    console.log('window height: ', wHeight)
+    let topHeight = (wHeight - headerHeight)
+    
+    topHeight = topHeight - (topHeight/4)
+    console.log(topHeight)
+    let topContentHeight = $('.topContent').innerHeight()
+    console.log(topContentHeight)
+    let topContentPadding = topHeight - topContentHeight
+    console.log(topContentPadding)
+    $('.topContent').css('padding', topContentPadding + 'px 0')
+    
+})
+
+$(window).resize( ()=> {
+    console.log('resize')
 })
 
 
