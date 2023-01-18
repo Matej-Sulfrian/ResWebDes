@@ -1,11 +1,11 @@
 @font-face {
-    font-family: TradeGothicLT;
-    src: url(../Trade_Gothic_Font/TradeGothicLT.ttf);
+    font-family: 'TradeGothicLT';
+    src: url('../Trade_Gothic_Font/TradeGothicLTLight.ttf');
 }
 
 @font-face {
-    font-family: TradeGothicLT;
-    src: url(../Trade_Gothic_Font/TradeGothicLTBoldExtended.ttf);
+    font-family: 'TradeGothicLT';
+    src: url('../Trade_Gothic_Font/TradeGothicLTBoldNo2.ttf');
     font-weight: bold;
 }
 
@@ -21,17 +21,19 @@
 
 body {
     margin: 0;
-    font-family: TradeGothicLT, sans-serif;
+    font-family: TradeGothicLT;
 }
 
 p {
     margin: 0;
+    line-height: 1.6;
 }
 
 .content {
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
+    display: flex;
 }
 
 header {
@@ -72,7 +74,7 @@ header .mid {
     justify-content: center;
 }
 
-header .right{
+header .right {
     justify-content: flex-end;
 }
 
@@ -116,7 +118,7 @@ header p {
     color: #fff;
 }
 
-.top h1 {
+h1 {
     z-index: 1;
     filter: drop-shadow(0 0 30px #1f1e21);
     font-family: FF Good Pro Comp Ultra;
@@ -137,19 +139,21 @@ header p {
     font-size: 20px;
     filter: drop-shadow(0 0 30px #1f1e21) drop-shadow(0 0 20px #1f1e21) drop-shadow(0 0 10px #1f1e21);
     margin-top: 1.5rem;
+    font-family: TradeGothicLT;
 }
 
 .button p {
     display: inline-flex;
     position: relative;
     align-items: center;
-    transition: background-color .35s ease-out,color .35s ease-out;
+    transition: background-color .35s ease-out, color .35s ease-out;
     z-index: 1;
     margin: -0.15em -0.65em;
     background-color: transparent;
     padding: 0.15em 0.65em;
     line-height: 1.5em;
-    font-size: 1.0625rem!important;
+    font-size: 1.0625rem !important;
+    z-index: 100;
 }
 
 .button {
@@ -167,21 +171,21 @@ header p {
     -ms-user-select: none;
     user-select: none;
     background-color: transparent;
-    border: 2px solid transparent;
+    /* border: 2px solid transparent; */
     padding: 0.85rem 2rem;
-    font-size: 1.0625rem!important;
+    font-size: 1.0625rem !important;
     line-height: 1.6;
     border-radius: 0;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .bg-fisherman-s-frriend-red {
-    background-color: #da291c!important;
+    background-color: #da291c;
 }
 
 .text-white {
     color: #fff;
-    filter: none!important;
+    filter: none !important;
 }
 
 .buttonWrap {
@@ -199,37 +203,107 @@ header p {
     overflow: hidden;
     padding: 0;
     background-color: #da291c;
-  }
-  
-  
-  .stripe {
+    transition: background-color .15s ease-in-out;
+}
+
+
+.stripe {
     fill: #fff;
     transform: rotate(45deg);
     transition: transform 0.1s ease-in-out;
     height: 150%;
-  }
+}
 
+.stripe.red {
+    fill: rgb(229, 105, 96)
+}
+
+
+.stripe-button svg {
+    position: relative;
+    z-index: 1;
+}
 
 .stripe-1 {
-    transition-delay: 0s;
-  }
-  .stripe-2 {
-    transition-delay: 0.1s;
-  }
-  .stripe-3 {
-    transition-delay: 0.2s;
-  }
-  .stripe-4 {
     transition-delay: 0.3s;
-  }
-  .stripe-5 {
+}
+
+.stripe-2 {
     transition-delay: 0.4s;
-  }
-  .stripe-6 {
-    transition-delay: 0.5s;
-  }
-  
-  .stripe-button:hover .stripe {
+}
+
+.stripe-3 {
+    transition-delay: 0.3s;
+}
+
+.stripe-4 {
+    transition-delay: 0.1s;
+}
+
+.stripe-5 {
+    transition-delay: 0.2s;
+}
+
+.stripe-6 {
+    transition-delay: 0.1s;
+}
+
+.button:hover .stripe {
     transform: rotate(45deg) translate(0, -100%);
-  }
-  
+}
+
+.button:hover p {
+    background-color: rgb(229, 105, 96);
+}
+
+.row1 {
+    display: flex;
+    width: 100%;
+    padding-top: 112px;
+    padding-bottom: 112px;
+}
+
+.mint {
+    background-color: #7ee3c5;
+}
+
+.row1 .left, .row1 .right {
+    width: 47.5%;
+    display: flex;
+    align-items: center;
+}
+
+.row1 .left {
+    padding-left: 2.5%;
+}
+
+.row1 .right {
+    padding-right: 2.5%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.row1 .left img {
+    width: 50%;
+    margin-left: 20%;
+}
+
+.row1 h1 {
+    color: #fff;
+    filter: none;
+    word-wrap: break-word;
+}
+
+.row1 h1 span {
+    -webkit-text-stroke: 1.5px;
+    -webkit-text-fill-color: transparent;
+    width: 80%;
+}
+
+.row1 p {
+    font-size: 20px;
+    margin-top: 1.5rem;
+    color: #fff;
+    font-family: TradeGothicLT;
+    width: 80%;
+}
