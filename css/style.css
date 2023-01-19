@@ -290,9 +290,6 @@ h2 {
     width: 100%;
     padding-top: 112px;
     padding-bottom: 112px;
-}
-
-.mintBG {
     background-color: #7ee3c5;
 }
 
@@ -617,24 +614,28 @@ span.stroke {
 
 .row3.blueBG img, .row3.honeyBG img, .row3.blackBG img, .row3.eucaBG img, .row3.mintBG img {
       content: url('../assets/seawatch_web-5.jpg.webp');
+      border: 10px outset white;
   }
 
 /* SEA 3 */
 
 .row3.blueBG img, .row3.berryBG img, .row3.salbeiBG img, .row3.chocolateBG img{
     content: url('../assets/sea2.jpg');
+    border: 10px outset white;
 }
 
 /* AIR */
 
 .row3.lightblueBG img, .row3.mintBG2 img, .row3.cherryBG img, .row3.tropicalBG img {
     content: url('../assets/air.webp');
+    border: 10px outset white;
 }
 
 /* AURO */
 
 .row3.pinkBG img, .row3.anisBG img, .row3.lemonBG img, .row3.appleBG img {
     content: url('../assets/auro.webp');
+    border: 10px outset white;
 }
 
   .row3 .right {
@@ -741,6 +742,51 @@ span.stroke {
   background-color: #bd8643;
 }
 
+footer .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer svg {
+    width: 56px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+footer svg:hover g {
+    fill: #da291c;
+    transition: all 0.1s ease;
+}
+
+footer svg g {
+    fill: #6C6C6D;
+    transition: all 0.1s ease;
+}
+
+footer .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    width: 100px;
+}
+
+footer p {
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 15px 0;
+}
 
 
   
