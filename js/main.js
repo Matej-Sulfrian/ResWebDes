@@ -7,7 +7,7 @@ let wHeight
 window.addEventListener('load', () => {
     header = $('header')
     headerHeight = $(header).outerHeight()
-    $('.top').css('margin-top', headerHeight + 'px')
+    $('.topHead').css('margin-top', headerHeight + 'px')
     console.log('header height: ', headerHeight)
     
     wHeight = $(window).innerHeight()
