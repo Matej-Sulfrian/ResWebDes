@@ -1,29 +1,10 @@
-// less sass für css
-
 let header
 let headerHeight
 let wHeight
 
 window.addEventListener('load', () => {
-    // header = $('header')
-    // headerHeight = $(header).outerHeight()
-    // $('.topHead').css('margin-top', headerHeight + 'px')
-    // console.log('header height: ', headerHeight)
-
-    // wHeight = $(window).innerHeight()
-    // console.log('window height: ', wHeight)
-    // let topHeight = (wHeight - headerHeight)
-
-    // topHeight = topHeight - (topHeight/4)
-    // console.log(topHeight)
-    // let topContentHeight = $('.topContent').innerHeight()
-    // console.log(topContentHeight)
-    // let topContentPadding = topHeight - topContentHeight
-    // console.log(topContentPadding)
-    // $('.topContent').css('padding', topContentPadding + 'px 0')
     console.log('load')
     sizeHeaderAndTop()
-    // textCarousel()
 
 })
 
@@ -33,8 +14,6 @@ window.addEventListener('resize', () => {
 })
 
 function sizeHeaderAndTop() {
-
-
     header = $('header')
     headerHeight = $(header).outerHeight()
     $('.topHead').css('margin-top', headerHeight + 'px')
@@ -53,12 +32,31 @@ function sizeHeaderAndTop() {
         topContentPadding = 80
     }
     console.log('top content padding: ', Math.abs(topContentPadding))
-    // $('.topContent').css('padding', Math.abs(topContentPadding) + 'px')
-
     $('.topContent').css('padding-bottom', (Math.abs(topContentPadding) * 2) + 'px')
 
+
+    let wWidth = $(window).innerWidth()
+    let wFloatText = document.querySelector('.floatText').scrollWidth
+    document.documentElement.style.setProperty('--end-width', '-' + percentage((wFloatText - wWidth + 100), wWidth) + '%')
+    console.log(getComputedStyle(document.documentElement).getPropertyValue('--end-width'))
+
+
+
+    let allPInRow3 = document.querySelectorAll('.row3 .bottom p')
+    let row3 = document.querySelector('.row3')
+    for (let p of allPInRow3) {
+        p.addEventListener('mouseover', function(e) {
+            let color = e.target.getAttribute('data')
+            console.log(color)
+            row3.classList.remove(row3.classList[1])
+            row3.classList.add(color)
+        })
+    }
 }
 
+function percentage(partialValue, totalValue) {
+    return (100 * partialValue) / totalValue;
+ } 
 
 let lastScrollTop = 0
 $(document).scroll(() => {

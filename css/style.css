@@ -19,6 +19,10 @@
     font-style: normal;
 }
 
+:root {
+    --end-width: -200%
+}
+
 body {
     margin: 0;
     font-family: TradeGothicLT;
@@ -164,7 +168,7 @@ h2 {
     background-color: transparent;
     padding: 0.15em 0.65em;
     line-height: 1.5em;
-    font-size: 1.0625rem !important;
+    font-size: 1.0625rem;
     z-index: 100;
 }
 
@@ -431,10 +435,17 @@ h2 {
     fill: rgb(0 0 0 / 0%);
 }
 
+/* .contentWrap {
+    margin: 168px 0;
+    content: ' ';
+} */
+
 .triggerWrap {
     width: 100%;
-    margin-top: 20%;
+    margin-top: 268px;
+    margin-bottom: 168px;;
     position: relative;
+    display: flex;
 }
 
 .triggerWrap .floatTextWrap {
@@ -465,13 +476,13 @@ h2 {
     white-space: nowrap;
     margin-left: 1rem;
     animation-name: rightToLeft;
-    animation-duration: 60s;
+    animation-duration: 120s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
-.row2 p.floatText span {
+span.stroke {
     -webkit-text-stroke: 1.5px;
     -webkit-text-fill-color: transparent;
 }
@@ -481,10 +492,255 @@ h2 {
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(var(--end-width));
     }
   }
 
   .blueBG {
       background-color: #00778b;
+      transition: all 0.2s ease;
   }
+
+  .mintBG, .mintBG2 {
+    background-color: #47d7ac;
+    transition: all 0.2s ease;
+  }
+
+  .lightblueBG {
+    background-color: #41b6e6;
+    transition: all 0.2s ease;
+  }
+
+  .pinkBG {
+    background-color: #df1995;
+    transition: all 0.2s ease;
+  }
+
+  .honeyBG {
+    background-color: #d3bc8d;
+    transition: all 0.2s ease;
+  }
+
+  .berryBG {
+    background-color: #72246c;
+    transition: all 0.2s ease;
+  }
+
+  .anisBG {
+    background-color: #f2a900;
+    transition: all 0.2s ease;
+  }
+
+  .cherryBG {
+    background-color: #9b2242;
+    transition: all 0.2s ease;
+  }
+
+  .lemonBG {
+    background-color: #f7ea48;
+    transition: all 0.2s ease;
+  }
+
+  .blackBG {
+    background-color: #1f1e21;
+    transition: all 0.2s ease;
+  }
+
+  .salbeiBG {
+    background-color: #c6a1cf;
+    transition: all 0.2s ease;
+  }
+
+  .tropicalBG {
+    background-color: #ffa300;
+    transition: all 0.2s ease;
+  }
+
+  .appleBG {
+    background-color: #97d700;
+    transition: all 0.2s ease;
+  }
+
+  .eucaBG {
+    background-color: #da291c;
+    transition: all 0.2s ease;
+  }
+
+  .chocolateBG {
+    background-color: #bd8643;
+    transition: all 0.2s ease;
+  }
+
+  .row3 {
+      padding: 84px 0 ;
+  }
+
+  .row3 .content {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .row3 h1 {
+      filter: none;
+      color: #fff;
+      font-size: 11.25rem;
+  }
+
+.row3 .top {
+    width: 65%;
+}
+
+  .row3 .bottom {
+      display: flex;
+      width: 100%;
+      margin-top: 56px;
+  }
+
+  .row3 .left {
+      display: flex;
+      justify-content: center;
+  }
+
+  .row3 .left {
+      width: 65%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+  }
+
+
+.row3 img {
+    width: 60%;
+}
+
+/* SEA 5 */
+
+.row3.blueBG img, .row3.honeyBG img, .row3.blackBG img, .row3.eucaBG img, .row3.mintBG img {
+      content: url('../assets/seawatch_web-5.jpg.webp');
+  }
+
+/* SEA 3 */
+
+.row3.blueBG img, .row3.berryBG img, .row3.salbeiBG img, .row3.chocolateBG img{
+    content: url('../assets/sea2.jpg');
+}
+
+/* AIR */
+
+.row3.lightblueBG img, .row3.mintBG2 img, .row3.cherryBG img, .row3.tropicalBG img {
+    content: url('../assets/air.webp');
+}
+
+/* AURO */
+
+.row3.pinkBG img, .row3.anisBG img, .row3.lemonBG img, .row3.appleBG img {
+    content: url('../assets/auro.webp');
+}
+
+  .row3 .right {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.row3 .right p {
+    font-size: .85rem;
+    text-transform: uppercase;
+    font-family: TradeGothicLT;
+    font-weight: bold;
+    color: #fff;
+    padding: 8px 24px;
+    cursor: pointer;
+}
+
+.row3 .right p:hover {
+    text-decoration: underline;
+}
+
+.row3 .buttonWrap {
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.row3 .button, .row3 .stripe-button {
+    border: 1px solid #fff;
+    background-color: rgb(0 0 0 / 0%) !important;
+}
+
+.row3 .stripe:nth-child(even) {
+    fill: rgb(0 0 0 / 0%);
+}
+
+
+
+.row3 .button p {
+    font-size: 1.3rem;
+}
+
+.blueBG .button:hover p {
+    background-color: #00778b;
+}
+
+.mintBG .button:hover p, .mintBG2 .button:hover p {
+  background-color: #47d7ac;
+}
+
+.lightblueBG .button:hover p {
+  background-color: #41b6e6;
+}
+
+.pinkBG .button:hover p {
+  background-color: #df1995;
+}
+
+.honeyBG .button:hover p {
+  background-color: #d3bc8d;
+}
+
+.berryBG .button:hover p {
+  background-color: #72246c;
+}
+
+.anisBG .button:hover p {
+  background-color: #f2a900;
+}
+
+.cherryBG .button:hover p {
+  background-color: #9b2242;
+}
+
+.lemonBG .button:hover p {
+  background-color: #f7ea48;
+}
+
+.blackBG .button:hover p {
+  background-color: #1f1e21;
+}
+
+.salbeiBG .button:hover p {
+  background-color: #c6a1cf;
+}
+
+.tropicalBG .button:hover p {
+  background-color: #ffa300;
+}
+
+.appleBG .button:hover p {
+  background-color: #97d700;
+}
+
+.eucaBG .button:hover p {
+  background-color: #da291c;
+}
+
+.chocolateBG .button:hover p {
+  background-color: #bd8643;
+}
+
+
+
+  
