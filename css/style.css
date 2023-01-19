@@ -112,7 +112,7 @@ header p {
 .topHead .topContent {
     display: flex;
     flex-direction: column;
-    /* padding-top: 400px; */
+    padding-top: 128px;
     width: 40%;
     margin-left: auto;
     font-size: 40px;
@@ -378,6 +378,10 @@ h2 {
     margin-top: 10%;
 }
 
+.row2 h2 {
+    margin-top: 112px;
+}
+
 .row2 h2, .row2 p {
     margin-left: -10%;
 }
@@ -402,7 +406,19 @@ h2 {
 
 .row2 .stripe-box {
     width: 80%;
-    transform: translate(-20%, -30%);
+    margin-top: 50px;
+}
+
+.row2 .stripe-box svg {
+    opacity: 1;
+    transform: translate(-20%, -40%);
+    transition: all 1s ease;
+}
+
+.row2 .stripe-box.hide svg {
+    opacity: 0;
+    transform: translate(-20%, 0);
+    transition: all 0.8s ease;
 }
 
 .row2 .stripe {
