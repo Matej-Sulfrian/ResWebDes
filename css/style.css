@@ -431,3 +431,60 @@ h2 {
     fill: rgb(0 0 0 / 0%);
 }
 
+.triggerWrap {
+    width: 100%;
+    margin-top: 20%;
+    position: relative;
+}
+
+.triggerWrap .floatTextWrap {
+    width: 100%;
+    position: absolute;
+    top: -15rem;
+    overflow-x: hidden;
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.8s ease;
+}
+
+.triggerWrap.hide .floatTextWrap {
+    transform: translateY(50%);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.row2 p.floatText {
+    font-family: FF Good Pro Comp, sans-serif;
+    font-weight: 900;
+    /* font-size: 240px; */
+    color: #1f1e21;
+    line-height: 1.25em;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    font-size: 15rem;
+    white-space: nowrap;
+    margin-left: 1rem;
+    animation-name: rightToLeft;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.row2 p.floatText span {
+    -webkit-text-stroke: 1.5px;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes rightToLeft {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .blueBG {
+      background-color: #00778b;
+  }

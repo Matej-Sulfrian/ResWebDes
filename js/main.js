@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
     // $('.topContent').css('padding', topContentPadding + 'px 0')
     console.log('load')
     sizeHeaderAndTop()
-    
+    // textCarousel()
 
 })
 
@@ -80,13 +80,23 @@ $(document).scroll(() => {
         $(header).removeClass('hide')
     }
     lastScrollTop = st;
+
     let stripeBox = document.querySelector('.row2 .stripe-box')
     if (elementInViewport2(stripeBox) && stripeBox.classList.contains('hide')) {
-            setTimeout(() => {
-                stripeBox.classList.remove('hide')
-            }, 150)
+        setTimeout(() => {
+            stripeBox.classList.remove('hide')
+        }, 150)
     } else if (!elementInViewport2(stripeBox) && !stripeBox.classList.contains('hide')) {
         stripeBox.classList.add('hide')
+    }
+
+    let floatText = document.querySelector('.triggerWrap')
+    if (elementInViewport2(floatText) && floatText.classList.contains('hide')) {
+        setTimeout(() => {
+            floatText.classList.remove('hide')
+        }, 150)
+    } else if (!elementInViewport2(floatText) && !floatText.classList.contains('hide')) {
+        floatText.classList.add('hide')
     }
 })
 
@@ -95,17 +105,17 @@ function elementInViewport2(el) {
     var left = el.offsetLeft;
     var width = el.offsetWidth;
     var height = el.offsetHeight;
-  
-    while(el.offsetParent) {
-      el = el.offsetParent;
-      top += el.offsetTop;
-      left += el.offsetLeft;
+
+    while (el.offsetParent) {
+        el = el.offsetParent;
+        top += el.offsetTop;
+        left += el.offsetLeft;
     }
-  
+
     return (
-      top < (window.pageYOffset + window.innerHeight) &&
-      left < (window.pageXOffset + window.innerWidth) &&
-      (top + height) > window.pageYOffset &&
-      (left + width) > window.pageXOffset
+        top < (window.pageYOffset + window.innerHeight) &&
+        left < (window.pageXOffset + window.innerWidth) &&
+        (top + height) > window.pageYOffset &&
+        (left + width) > window.pageXOffset
     );
-  }
+}
