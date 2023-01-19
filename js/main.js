@@ -4,7 +4,7 @@ let header
 let headerHeight
 let wHeight
 
-$(document).ready(() => {
+window.addEventListener('load', () => {
     header = $('header')
     headerHeight = $(header).outerHeight()
     $('.top').css('margin-top', headerHeight + 'px')
