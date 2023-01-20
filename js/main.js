@@ -14,6 +14,10 @@ window.addEventListener('resize', () => {
 })
 
 function sizeHeaderAndTop() {
+    
+    let wWidth = $(window).innerWidth()
+
+
     header = $('header')
     headerHeight = $(header).outerHeight()
     $('.topHead').css('margin-top', headerHeight + 'px')
@@ -31,11 +35,17 @@ function sizeHeaderAndTop() {
     if (topContentPadding < 80) {
         topContentPadding = 80
     }
+    if (wWidth <= 770) {
+        topContentPadding = 40
+    }
+    if (wWidth <= 486) {
+        topContentPadding = 20
+    }
     console.log('top content padding: ', Math.abs(topContentPadding))
     $('.topContent').css('padding-bottom', (Math.abs(topContentPadding) * 2) + 'px')
 
 
-    let wWidth = $(window).innerWidth()
+    
     let wFloatText = document.querySelector('.floatText').scrollWidth
     document.documentElement.style.setProperty('--end-width', '-' + percentage((wFloatText - wWidth + 100), wWidth) + '%')
     console.log(getComputedStyle(document.documentElement).getPropertyValue('--end-width'))
